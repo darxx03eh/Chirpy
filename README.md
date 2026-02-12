@@ -1,28 +1,3 @@
----
-title: Default module
-language_tabs:
-  - shell: Shell
-  - http: HTTP
-  - javascript: JavaScript
-  - ruby: Ruby
-  - python: Python
-  - php: PHP
-  - java: Java
-  - go: Go
-toc_footers: []
-includes: []
-search: true
-code_clipboard: true
-highlight_theme: darkula
-headingLevel: 2
-generator: "@tarslib/widdershins v4.0.30"
-
----
-
-# Default module
-
-Base URLs:
-
 # Authentication
 
 - HTTP Authentication, scheme: bearer
@@ -227,7 +202,8 @@ POST /api/users
   "id": "b4869886-f156-4bf1-ade8-ff49f60de666",
   "createdAt": "2026-02-11T14:27:57.132Z",
   "updateAt": "2026-02-11T14:27:57.132Z",
-  "email": "darawsheh003@gmail.com"
+  "email": "darawsheh003@gmail.com",
+  "isChirpyRed": false
 }
 ```
 
@@ -249,7 +225,7 @@ POST /api/login
 {
   "email": "darxx03eh@gmail.com",
   "password": "123456789",
-  "expiresInSeconds": 2
+  "expiresInSeconds": 3000
 }
 ```
 
@@ -264,7 +240,15 @@ POST /api/login
 > 200 Response
 
 ```json
-{}
+{
+    "id": "1db4c364-4cd8-4e77-9c80-d0efe25aee51",
+    "email": "darxx03eh@gmail.com",
+    "createdAt": "2026-02-12T15:51:07.590Z",
+    "updatedAt": "2026-02-12T14:10:47.513Z",
+    "isChirpyRed": true,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjaGlycHkiLCJzdWIiOiIxZGI0YzM2NC00Y2Q4LTRlNzctOWM4MC1kMGVmZTI1YWVlNTEiLCJpYXQiOjE3NzA5MDU0NTcsImV4cCI6MTc3MDkwODQ1N30.n4jgD9Y7TyDRhDzjouqG0xGXvhAV8IoqFPnTcJxpyUU",
+    "refreshToken": "2d09810f7108b618f01807f485a729d25e1071a873fa970d90621ffc751d683d"
+}
 ```
 
 ### Responses
@@ -284,7 +268,9 @@ POST /api/refresh
 > 200 Response
 
 ```json
-{}
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjaGlycHkiLCJzdWIiOiIxZGI0YzM2NC00Y2Q4LTRlNzctOWM4MC1kMGVmZTI1YWVlNTEiLCJpYXQiOjE3NzA5MDc5MDQsImV4cCI6MTc3MDkxMTUwNH0.Puwfr4U_4htrXrmtdYLLoR3NzHNamgBGm6ShT-sQWok"
+}
 ```
 
 ### Responses
